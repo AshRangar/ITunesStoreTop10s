@@ -7,4 +7,9 @@ import java.util.ArrayList;
  */
 public class RssEntriesList {
     private ArrayList<RssEntry> mRssEntries;
+
+    public RssEntriesList() {
+        mRssEntries = new ArrayList<RssEntry>();
+        initializeRssEntries();
+    }
 }
