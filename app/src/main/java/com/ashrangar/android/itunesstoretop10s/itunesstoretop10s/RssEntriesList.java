@@ -25,4 +25,8 @@ public class RssEntriesList {
         mRssEntries.add(new RssEntry("TV Seasons", ""));
         mRssEntries.add(new RssEntry("TV Episodes", ""));
     }
+
+    public ArrayList<RssEntry> getRssEntries() {
+        return mRssEntries;
+    }
 }
