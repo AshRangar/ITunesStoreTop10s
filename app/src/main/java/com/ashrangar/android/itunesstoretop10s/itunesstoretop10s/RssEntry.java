@@ -21,7 +21,7 @@ public class RssEntry {
     }
 
     public String getTitle() {
-        return title;
+        return "Top 10 " + title;
     }
 
     public void setTitle(String title) {
