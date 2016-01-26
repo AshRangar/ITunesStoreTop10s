@@ -47,4 +47,14 @@ public class ITunesEntry {
     public void populateData() {
 
     }
+
+    @Override
+    public String toString() {
+        StringBuilder description = new StringBuilder();
+        description.append("Name: " + name + "\n");
+        description.append("Artist: " + artist + "\n");
+        description.append("Release Date: " + releaseDate);
+
+        return description.toString();
+    }
 }
