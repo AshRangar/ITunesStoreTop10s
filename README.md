@@ -1,4 +1,4 @@
-<h3> Android Application<h3>
+<title> Android Application</title>
 <h5>Display the iTunes Store Top 10 downloads in each category</h5>
 <h5>Gets data from Apple's RSS feeds</h5>
 <h5> List of supported categories </h5>
