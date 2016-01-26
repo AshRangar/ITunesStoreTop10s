@@ -14,7 +14,7 @@ public class RssListActivity extends AppCompatActivity {
 
     private ListView mRssListView;
     private RssEntriesList mRssEntriesList;
-
+    private Toolbar mToolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +23,9 @@ public class RssListActivity extends AppCompatActivity {
 
         mRssListView = (ListView) findViewById(R.id.rssListView);
         mRssEntriesList = new RssEntriesList();
+
+        mToolbar = (Toolbar) findViewById(R.id.toolbar);
+        mToolbar.setTitle(R.string.app_name);
 
         ArrayAdapter<RssEntry> arrayAdapter = new ArrayAdapter<RssEntry>(
                 RssListActivity.this, R.layout.list_view, mRssEntriesList.getRssEntries()
