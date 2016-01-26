@@ -12,6 +12,7 @@ import android.widget.ListView;
 
 public class RssListActivity extends AppCompatActivity {
 
+    private static final String TAG = RssListActivity.class.getSimpleName().toString();
     private ListView mRssListView;
     private RssEntriesList mRssEntriesList;
     private Toolbar mToolbar;
