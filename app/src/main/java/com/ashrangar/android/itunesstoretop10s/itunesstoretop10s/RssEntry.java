@@ -31,4 +31,11 @@ public class RssEntry {
     public String toString() {
         return "Top 10 " + title;
     }
+
+    public ArrayList<ITunesEntry> getITunesEntries() {
+        ITunesEntriesFactory iteFactory = new ITunesEntriesFactory();
+        mITunesEntries = iteFactory.getITunesEntries(url);
+
+        return mITunesEntries;
+    }
 }
