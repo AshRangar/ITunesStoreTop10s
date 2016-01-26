@@ -29,7 +29,7 @@ public class RssListActivity extends AppCompatActivity {
         mToolbar.setTitle(R.string.app_name);
 
         ArrayAdapter<RssEntry> arrayAdapter = new ArrayAdapter<RssEntry>(
-                RssListActivity.this, R.layout.list_view, mRssEntriesList.getRssEntries()
+                RssListActivity.this, R.layout.rss_list, mRssEntriesList.getRssEntries()
         );
 
         mRssListView.setAdapter(arrayAdapter);
