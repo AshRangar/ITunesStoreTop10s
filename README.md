@@ -1,5 +1,5 @@
 <h3>Android Application</h3>
-Display the iTunes Store Top 10 downloads in each category
+Display the iTunes Store Top 10 downloads in each category\n
 Gets data from Apple's RSS feeds
 <h5>List of supported categories </h5>
 <ul>
