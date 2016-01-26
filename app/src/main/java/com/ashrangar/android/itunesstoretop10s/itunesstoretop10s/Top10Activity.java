@@ -17,4 +17,9 @@ import java.net.URL;
 import java.util.ArrayList;
 
 public class Top10Activity extends AppCompatActivity {
+    private final String TAG = Top10Activity.class.getSimpleName().toString();
+    private RssEntry mRssEntry;
+    private ListView mEntriesListView;
+    private Toolbar mToolbar;
+    private String mXmlData;
 }
