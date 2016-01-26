@@ -83,4 +83,42 @@ public class Top10Activity extends AppCompatActivity {
             Log.d(TAG, iTunesEntries.toString());
 
         }
+
+        private String downloadXMLFile() {
+            StringBuilder tempBuffer = new StringBuilder();
+
+            try {
+                URL url = new URL(urlPath);
+
+                HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+                int response = connection.getResponseCode();
+                Log.d(TAG, "The response code was " + response);
+
+                InputStream is = connection.getInputStream();
+                InputStreamReader isr = new InputStreamReader(is);
+
+                int charRead;
+                char[] inputBuffer = new char[500];
+
+                while(true) {
+                    charRead = isr.read(inputBuffer);
+                    if(charRead <= 0) {
+                        break;
+                    }
+                    tempBuffer.append(String.copyValueOf(inputBuffer, 0, charRead));
+                }
+
+                return tempBuffer.toString();
+
+            } catch (IOException e) {
+                Log.d(TAG, "IOException reading data " + e.getMessage());
+            } catch (SecurityException e) {
+                Log.d(TAG, "SecurityException " + e.getMessage());
+            }
+            return null;
+        }
+
+    }
+
+
 }
