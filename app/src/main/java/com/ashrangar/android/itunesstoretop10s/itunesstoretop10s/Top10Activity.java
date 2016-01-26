@@ -50,4 +50,15 @@ public class Top10Activity extends AppCompatActivity {
             super();
         }
 
+        @Override
+        protected String doInBackground(String... params) {
+            this.urlPath = params[0];
+            mXmlData = downloadXMLFile();
+
+            if(mXmlData == null) {
+                Log.d(TAG, "Error downloading");
+            }
+
+            return mXmlData;
+        }
 }
