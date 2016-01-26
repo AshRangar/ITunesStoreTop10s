@@ -6,10 +6,12 @@ package com.ashrangar.android.itunesstoretop10s.itunesstoretop10s;
 public class RssEntry {
     private String title;
     private String url;
+    private ArrayList<ITunesEntry> mITunesEntries;
 
     public RssEntry(String title, String url) {
         this.title = title;
         this.url = url;
+        this.mITunesEntries = new ArrayList<ITunesEntry>();
     }
 
     public String getUrl() {
