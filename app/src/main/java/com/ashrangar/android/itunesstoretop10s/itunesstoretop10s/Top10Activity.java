@@ -61,4 +61,26 @@ public class Top10Activity extends AppCompatActivity {
 
             return mXmlData;
         }
+
+        @Override
+        protected void onPostExecute(String s) {
+            super.onPostExecute(s);
+
+            ITunesEntriesFactory ieFactory = new ITunesEntriesFactory();
+            ArrayList<ITunesEntry> iTunesEntries =  ieFactory.getITunesEntries(mXmlData);;
+
+            Log.d(TAG, "mRssEntry is " + mRssEntry);
+
+            if(iTunesEntries.size() > 0) {
+            }
+
+            ArrayAdapter<ITunesEntry> arrayAdapter = new ArrayAdapter<ITunesEntry>(
+                    Top10Activity.this, R.layout.itunes_list, iTunesEntries
+            );
+
+            mEntriesListView.setAdapter(arrayAdapter);
+
+            Log.d(TAG, iTunesEntries.toString());
+
+        }
 }
