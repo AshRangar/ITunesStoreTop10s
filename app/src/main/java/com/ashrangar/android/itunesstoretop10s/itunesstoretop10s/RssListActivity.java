@@ -26,6 +26,20 @@ public class RssListActivity extends AppCompatActivity {
         );
 
         mRssListView.setAdapter(arrayAdapter);
+
+        mRssListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                String selectedItem = parent.getItemAtPosition(position).toString();
+                Log.d(TAG, "Selected item is " + selectedItem);
+
+                RssEntry rssEntry = mRssEntriesList.getRssEntries().get(position);
+
+                Intent intent = new Intent(RssListActivity.this, Top10Activity.class);
+                intent.putExtra(getString(R.string.rss_entry_key), rssEntry);
+                startActivity(intent);
+            }
+        });
     }
 
 }
