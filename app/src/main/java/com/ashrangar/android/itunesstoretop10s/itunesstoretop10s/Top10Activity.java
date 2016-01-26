@@ -41,4 +41,13 @@ public class Top10Activity extends AppCompatActivity {
         mToolbar.setTitle(mRssEntry.getTitle());
 
     }
+
+    private class XmlData extends AsyncTask<String, Void, String> {
+        private final String TAG = XmlData.class.getSimpleName().toString();
+        private String urlPath;
+
+        public XmlData() {
+            super();
+        }
+
 }
