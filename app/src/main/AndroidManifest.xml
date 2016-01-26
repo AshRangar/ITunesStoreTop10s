@@ -15,6 +15,16 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity
+            android:name=".Top10Activity"
+            android:label="@string/title_activity_top10"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".RssListActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ashrangar.android.itunesstoretop10s.itunesstoretop10s.RssListActivity"/>
+        </activity>
     </application>
 
     <uses-permission android:name="android.permission.INTERNET"/>
