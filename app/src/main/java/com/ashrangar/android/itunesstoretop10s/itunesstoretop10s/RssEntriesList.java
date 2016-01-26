@@ -22,9 +22,9 @@ public class RssEntriesList implements Serializable{
         mRssEntries.add(new RssEntry("Featured Albums", "http://ax.itunes.apple.com/WebObjects/MZStore.woa/wpa/MRSS/featuredalbums/limit=10/rss.xml"));
         mRssEntries.add(new RssEntry("Paid Apps", "http://ax.itunes.apple.com/WebObjects/MZStoreServices.woa/ws/RSS/toppaidapplications/limit=10/xml"));
         mRssEntries.add(new RssEntry("Free Apps", "http://ax.itunes.apple.com/WebObjects/MZStoreServices.woa/ws/RSS/topfreeapplications/limit=10/xml"));
-        mRssEntries.add(new RssEntry("Movies", "http://ax.itunes.apple.com/WebObjects/MZStoreServices.woa/ws/RSS/topMovies/xml"));
-        mRssEntries.add(new RssEntry("TV Seasons", "http://ax.itunes.apple.com/WebObjects/MZStoreServices.woa/ws/RSS/topTvSeasons/xml"));
-        mRssEntries.add(new RssEntry("TV Episodes", "http://ax.itunes.apple.com/WebObjects/MZStoreServices.woa/ws/RSS/topTvEpisodes/xml"));
+        mRssEntries.add(new RssEntry("Movies", "http://ax.itunes.apple.com/WebObjects/MZStoreServices.woa/ws/RSS/topMovies/limit=10/xml"));
+        mRssEntries.add(new RssEntry("TV Seasons", "http://ax.itunes.apple.com/WebObjects/MZStoreServices.woa/ws/RSS/topTvSeasons/limit=10/xml"));
+        mRssEntries.add(new RssEntry("TV Episodes", "http://ax.itunes.apple.com/WebObjects/MZStoreServices.woa/ws/RSS/topTvEpisodes/limit=10/xml"));
     }
 
     public ArrayList<RssEntry> getRssEntries() {
