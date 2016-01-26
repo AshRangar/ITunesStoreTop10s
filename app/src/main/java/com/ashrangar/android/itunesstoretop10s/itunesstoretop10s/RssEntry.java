@@ -1,9 +1,12 @@
 package com.ashrangar.android.itunesstoretop10s.itunesstoretop10s;
 
+import java.io.Serializable;
+import java.util.ArrayList;
+
 /**
  * Created by ashwin on 1/25/16.
  */
-public class RssEntry {
+public class RssEntry implements Serializable{
     private String title;
     private String url;
     private ArrayList<ITunesEntry> mITunesEntries;
