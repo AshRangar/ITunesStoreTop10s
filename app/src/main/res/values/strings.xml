@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ITunes Store Top 10s</string>
+    <string name="app_name">iTunes Store Top 10</string>
     <string name="title_activity_top10">Top10Activity</string>
-    <string name="rss_entry_key">RSSENTRY</string>
+    <string name="category_key">CATEGORY</string>
 </resources>
