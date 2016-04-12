@@ -5,13 +5,17 @@ import java.util.ArrayList;
 
 /**
  * Created by ashwin on 1/25/16.
+ *
+ * Each category is an object of Class Category
+ * Example: Songs is a category, Albums is a category
+ *
  */
-public class RssEntry implements Serializable{
+public class Category implements Serializable{
     private String title;
     private String url;
     private ArrayList<ITunesEntry> mITunesEntries;
 
-    public RssEntry(String title, String url) {
+    public Category(String title, String url) {
         this.title = title;
         this.url = url;
         this.mITunesEntries = new ArrayList<ITunesEntry>();
@@ -26,7 +30,7 @@ public class RssEntry implements Serializable{
     }
 
     public String getTitle() {
-        return "Top 10 " + title;
+        return title;
     }
 
     public void setTitle(String title) {
@@ -34,9 +38,10 @@ public class RssEntry implements Serializable{
     }
 
     public String toString() {
-        return "Top 10 " + title;
+        return title;
     }
 
+    // Returns the list of iTunesEntries (Example: List of songs)
     public ArrayList<ITunesEntry> getITunesEntries() {
         ITunesEntriesFactory iteFactory = new ITunesEntriesFactory();
         mITunesEntries = iteFactory.getITunesEntries(url);
